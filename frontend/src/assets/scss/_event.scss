@@ -1,0 +1,820 @@
+/* ==============
+ * Experience banner
+ * ============== */
+.experience-single-banner {
+  background-attachment: scroll;
+  background-color: transparent;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+
+  &:after {
+    background-attachment: scroll;
+    background-color: rgba($black, 0.25);
+    background-image: url('/images/grunge-back.png');
+    background-position: center bottom -80px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    @media (max-width: 1400px) {
+      background-size: 1400px 803px;
+    }
+  }
+
+  .experience-single-banner-wrapper {
+    padding-bottom: 25%;
+    padding-top: 20%;
+    position: relative;
+    z-index: 1;
+
+    @include media-breakpoint-down(xs) {
+      padding-bottom: 30%;
+      padding-top: 25%;
+    }
+
+    h1 {
+      color: $white;
+      font-size: 60px;
+      @include font-Titilliumweb-Bold;
+      letter-spacing: 1px;
+      line-height: 1.25;
+      margin-bottom: 0;
+      text-transform: uppercase;
+
+      @include media-breakpoint-down(lg) {
+        font-size: 48px;
+      }
+
+      @include media-breakpoint-down(md) {
+        font-size: 36px;
+      }
+
+      @include media-breakpoint-down(xs) {
+        font-size: 32px;
+      }
+    }
+
+    .experience-view-button {
+      background-image: radial-gradient(ellipse farthest-corner at right bottom,
+          #fedb37 0%,
+          #fdb931 8%,
+          #9f7928 30%,
+          #8a6e2f 40%,
+          transparent 80%),
+        radial-gradient(ellipse farthest-corner at left top,
+          #ffffff 0%,
+          #ffffac 8%,
+          #d1b464 25%,
+          #5d4a1f 62.5%,
+          #5d4a1f 100%);
+      background-size: 200% auto;
+      border: none;
+      border-radius: 28px;
+      color: $white;
+      font-size: 13px;
+      @include font-Titilliumweb-Semibold;
+      height: 56px;
+      letter-spacing: 1px;
+      margin-top: 30px;
+      min-width: 270px;
+      padding: 5px 25px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+/* ==============
+ * Expereince banner end
+ * ============== */
+/* ==============
+ * Experience content
+ * ============== */
+.experience-single-content {
+  padding-bottom: 30px;
+  padding-top: 20px;
+
+  @include media-breakpoint-down(sm) {}
+
+  .exprience-content-left {
+    flex-basis: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+
+    @include media-breakpoint-up(lg) {
+      flex-basis: calc(100% - 330px);
+      max-width: calc(100% - 330px);
+    }
+
+    .event-xs-wrapper {
+      margin-bottom: 30px;
+
+      .event-xs-location {
+        margin-right: 10px;
+
+        @include media-breakpoint-down(xs) {
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+
+        .country-icon {
+          align-items: center;
+          display: flex;
+          line-height: 1;
+          margin-right: 10px;
+
+          .flag-icon {
+            border: none;
+            height: 28px;
+            line-height: 1;
+            width: 42px;
+
+            &:before {
+              content: none;
+            }
+          }
+        }
+
+        .country-name {
+          color: $black;
+          font-size: 14px;
+          @include font-Titilliumweb-Bold;
+          line-height: 1.25;
+        }
+
+        .event-season {
+          color: #6d6d6d;
+          font-size: 12px;
+          @include font-Proximanova-Regular;
+          line-height: 1.25;
+        }
+      }
+
+      .event-xs-button {
+        .event-trip-button {
+          align-items: center;
+          background-color: #1e2226;
+          border-radius: 3px;
+          color: $white;
+          display: flex;
+          justify-content: center;
+          font-size: 13px;
+          @include font-Titilliumweb-Bold;
+          height: 28px;
+          letter-spacing: 1px;
+          line-height: 1.5;
+          min-width: auto;
+          padding: 5px 12px;
+          text-transform: uppercase;
+          white-space: nowrap;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .experience-description {
+      color: #58585a;
+      display: flex;
+      flex-direction: column;
+      font-size: 16px;
+      @include font-Proximanova-Regular;
+      line-height: 26px;
+      margin-bottom: 30px;
+
+      @media (max-width: 576px) {
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 17px;
+      }
+
+      .inshort {
+        ul {
+          list-style: none;
+        }
+
+        li {
+          @include font-Titilliumweb-Regular;
+          position: relative;
+          padding-left: 20px;
+
+          &:before {
+            content: '';
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            background-image: url('/images/star.svg');
+            background-size: cover;
+            background-position: center;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @media (max-width: 576px) {
+              top: 17px;
+            }
+          }
+        }
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: #1e2226;
+        @include font-Titilliumweb-Regular;
+        line-height: 1.2;
+        margin-bottom: 25px;
+      }
+
+      p {
+        color: #6d6d6d;
+        @include font-Titilliumweb-Regular;
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 20px;
+
+        @media (max-width: 576px) {
+          font-size: 17px;
+        }
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      li {
+        color: #1e2226;
+        @include font-Proximanova-Light;
+        font-size: 15pt;
+        line-height: 38px;
+      }
+
+      img {
+        float: left;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+    }
+
+    .experience-author {
+      background-color: $white;
+      border: 1px solid #d9d9d9;
+      border-radius: 8px;
+      box-shadow: 0 12px 24px -10px rgba($black, 0.1);
+      padding: 1rem;
+      margin-bottom: 30px;
+
+      .image {
+        border-radius: 50%;
+        height: 100px;
+        margin-right: 10px;
+        max-width: 100px;
+        overflow: hidden;
+        position: relative;
+        width: 100px;
+
+        img {
+          position: absolute;
+          width: 100%;
+        }
+      }
+
+      .text {
+        span {
+          color: #1e2226;
+          font-size: 13px;
+          @include font-Titilliumweb-Bold;
+          line-height: 1.25;
+          text-transform: uppercase;
+
+          &:first-child {
+            margin-bottom: 5px;
+          }
+
+          &:last-child {
+            color: #d5bc9e;
+            font-size: 21px;
+            @include font-Proximanova-Regular;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
+
+  .exprience-content-right {
+    flex-basis: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+
+    @include media-breakpoint-up(lg) {
+      flex-basis: 330px;
+      max-width: 330px;
+    }
+
+    .experience-sticky {
+      @include media-breakpoint-up(lg) {
+        position: sticky;
+        top: 70px;
+      }
+    }
+
+    .events-summary-content {
+      border: 1px solid #d9d9d9;
+      border-radius: 3px;
+      margin-bottom: 30px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 300px;
+      width: 100%;
+
+      .events-summary-item {
+        align-items: center;
+        padding: 8px 15px;
+
+
+        @media (max-width: 374px) {
+          padding-left: 12px;
+          padding-right: 12px;
+        }
+
+        &:not(:last-child) {
+          @include media-breakpoint-up(lg) {
+            border-bottom: 1px solid #d9d9d9;
+          }
+
+          @include media-breakpoint-down(md) {
+            border-right: 1px solid #d9d9d9;
+          }
+        }
+
+        .icon {
+          min-width: 28px;
+          max-width: 28px;
+
+          img {
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+
+        .locationicon {
+          max-height: 30px;
+        }
+
+        .text {
+          span {
+            color: #1e2226;
+            font-size: 15px;
+            @include font-Proximanova-Regular;
+            line-height: 20px;
+
+            &.title {
+              font-size: 13px;
+              // @include font-Titilliumweb-Bold;
+              line-height: 30px;
+              text-transform: uppercase;
+
+              b {
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .bigcta {
+      background-color: #1e2226;
+      border-radius: 3px;
+      box-shadow: 0px 4px 15px 0px rgba($black, 0.1);
+      padding: 30px 15px;
+      text-align: center;
+      margin-bottom: 30px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 300px;
+      width: 100%;
+
+      h2 {
+        color: $white;
+        font-size: 24px;
+        @include font-Titilliumweb-Bold;
+        line-height: 33px;
+        margin-bottom: 15px;
+      }
+
+      p {
+        color: #c9c9c9;
+        font-size: 14px;
+        @include font-Proximanova-Regular;
+        line-height: 27px;
+        margin-bottom: 10px;
+      }
+
+      .experience-view-button {
+        background-image: radial-gradient(ellipse farthest-corner at right bottom,
+            #fedb37 0%,
+            #fdb931 8%,
+            #9f7928 30%,
+            #8a6e2f 40%,
+            transparent 80%),
+          radial-gradient(ellipse farthest-corner at left top,
+            #ffffff 0%,
+            #ffffac 8%,
+            #d1b464 25%,
+            #5d4a1f 62.5%,
+            #5d4a1f 100%);
+        background-size: 200% auto;
+        border: none;
+        border-radius: 3px;
+        color: $white;
+        font-size: 13px;
+        @include font-Titilliumweb-Bold;
+        height: 56px;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+        max-width: 180px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-transform: uppercase;
+        transition: all 0.3s ease-in-out 0s;
+        width: 100%;
+
+        &:hover {
+          background-position: right center;
+        }
+      }
+
+      .addbucketlist {
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        color: #d5bc9e;
+        font-size: 18px;
+        @include font-Proximanova-Regular;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+.experience-video {
+  background-color: $white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px 0px rgba($black, 0.1);
+  height: auto;
+  margin-bottom: 30px;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+
+  iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+/* ==============
+ * Experience content end
+ * ============== */
+/* ==============
+ * Experience Popup
+ * ============== */
+.events-popup-modal {
+  .modal-dialog {
+    @include media-breakpoint-up(lg) {
+      max-width: 866px;
+    }
+
+    .modal-content {
+      background-attachment: scroll;
+      background-color: transparent;
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: none;
+      border-radius: 0;
+
+      .modal-body {
+        background-color: rgba($black, 0.7);
+        border: none;
+        border-radius: 0;
+        padding: 48px 48px 38px;
+
+        @include media-breakpoint-down(md) {
+          padding: 40px 20px 20px;
+        }
+
+        .modal-title {
+          color: $white;
+          font-size: 30px;
+          @include font-Titilliumweb-Semibold;
+          line-height: 40px;
+          margin-bottom: 15px;
+          overflow: hidden;
+          width: 100%;
+
+          @include media-breakpoint-up(lg) {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          @include media-breakpoint-down(md) {
+            -moz-box-orient: vertical;
+            -webkit-box-orient: vertical;
+            box-orient: vertical;
+            display: inline-block;
+            display: -moz-box;
+            display: -webkit-box;
+            font-size: 22px;
+            height: 70px;
+            -moz-line-clamp: 2;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            line-height: 35px;
+            word-break: break-word;
+            word-wrap: break-word;
+          }
+        }
+
+        p {
+          color: $white;
+          font-size: 1rem;
+          @include font-Titilliumweb-Regular;
+          line-height: 1.75;
+          margin-bottom: 20px;
+
+          @include media-breakpoint-down(md) {
+            display: none;
+            font-size: 14px;
+            margin-bottom: 20px;
+          }
+        }
+
+        h4 {
+          color: $white;
+          font-size: 23px;
+          @include font-Titilliumweb-Bold;
+          line-height: 33px;
+          margin-bottom: 15px;
+        }
+
+        .list-unstyled {
+          margin-bottom: 40px;
+
+          @include media-breakpoint-down(md) {
+            margin-bottom: 20px;
+          }
+
+          li {
+            color: $white;
+            font-size: 1rem;
+            @include font-Titilliumweb-Regular;
+            line-height: 1.75;
+
+            @include media-breakpoint-down(md) {
+              font-size: 14px;
+            }
+
+            span {
+              &:not(:last-child) {
+                margin-right: 15px;
+
+                @include media-breakpoint-down(md) {
+                  margin-right: 10px;
+                }
+              }
+
+              i {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+
+        .events-popup-buttons {
+          .events-popup-button {
+            align-items: center;
+            background-color: transparent;
+            border: 2px solid transparent;
+            border-radius: 3px;
+            color: $black;
+            display: flex;
+            font-size: 13px;
+            @include font-Titilliumweb-Bold;
+            flex-direction: row;
+            height: 54px;
+            justify-content: center;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            padding: 5px 25px;
+            text-transform: uppercase;
+            transition: all 0.3s ease-in-out 0s;
+            width: 240px;
+
+            @include media-breakpoint-down(md) {
+              width: 100%;
+            }
+
+            &:not(:last-child) {
+              @include media-breakpoint-up(lg) {
+                margin-right: 40px;
+              }
+            }
+
+            &.gradient-button {
+              background-color: #ce9a62;
+              background-image: linear-gradient(-73deg,
+                  #ffffcf,
+                  #d8bf6f 22%,
+                  #8c7437 46%,
+                  #84692d 72%,
+                  #b49757);
+              background-size: 150% 150%;
+              border: none;
+              color: $white;
+            }
+
+            &.white-button {
+              background-color: $white;
+              border-color: $white;
+              color: $black;
+            }
+
+            &:hover {
+              text-decoration: none;
+
+              &.white-button {
+                background-color: transparent;
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ==============
+ * Experience Popup end
+ * ============== */
+/* ==============
+ * Experience related
+ * ============== */
+.experience-related {
+  // background-color: #1E2226;
+  background-color: #f4f4f4;
+  padding-bottom: 30px;
+  padding-top: 60px;
+
+  h2 {
+    margin-bottom: 50px;
+
+    span {
+      color: #1e2226;
+      font-size: 32px;
+      @include font-Titilliumweb-Bold;
+      text-transform: capitalize;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      a {
+        color: #d5bc9e;
+        font-size: 15px;
+        @include font-Titilliumweb-Semibold;
+        text-decoration: underline;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  // .experience-item {
+  //     flex-basis: 100%;
+  //     flex-grow: 0;
+  //     flex-shrink: 0;
+  //     max-width: 100%;
+  //     padding-left: 15px;
+  //     padding-right: 15px;
+
+  //     @include media-breakpoint-up(sm) {
+  //         flex-basis: 50%;
+  //         max-width: 50%;
+  //     }
+
+  //     @include media-breakpoint-up(md) {
+  //         flex-basis: 33.3333%;
+  //         max-width: 33.3333%;
+  //     }
+
+  //     @include media-breakpoint-up(lg) {
+  //         flex-basis: 25%;
+  //         max-width: 25%;
+  //     }
+
+  //     @media (min-width: 1600px) {
+  //         flex-basis: 20%;
+  //         max-width: 20%;
+  //     }
+  // }
+}
+
+/* ==============
+ * Experience related end
+ * ============== */
+/* ==============
+ * Experience sticky footer
+ * ============== */
+.sticky-footer-mobile {
+  background-color: #1e2226;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  padding: 12px 10px;
+  width: 100%;
+  z-index: 1055;
+
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+
+    .col-6 {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  .addbucketlist {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    color: #acacac;
+    font-size: 14px;
+    @include font-Proximanova-Regular;
+    line-height: 19px;
+    padding: 0;
+  }
+
+  .experience-view-button {
+    background-image: radial-gradient(ellipse farthest-corner at right bottom,
+        #fedb37 0%,
+        #fdb931 8%,
+        #9f7928 30%,
+        #8a6e2f 40%,
+        transparent 80%),
+      radial-gradient(ellipse farthest-corner at left top,
+        #ffffff 0%,
+        #ffffac 8%,
+        #d1b464 25%,
+        #5d4a1f 62.5%,
+        #5d4a1f 100%);
+    background-size: 200% auto;
+    border: none;
+    border-radius: 3px;
+    color: $white;
+    font-size: 13px;
+    @include font-Titilliumweb-Bold;
+    height: auto;
+    letter-spacing: 1px;
+    line-height: 1;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    width: 100%;
+
+    @media (max-width: 374px) {
+      font-size: 11px !important;
+      padding: 10px;
+    }
+  }
+}
+
+/* ==============
+ * Experience sticky footer end
+ * ============== */

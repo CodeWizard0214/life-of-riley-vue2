@@ -1,0 +1,38 @@
+/* ==============
+ * Past experience
+ * ============== */
+.past-experience{
+    padding-bottom: 30px;
+    padding-top: 60px;
+    h2{
+        border-bottom: 1px solid #1e2226;
+        color: #1e2226;
+        font-size: 32px;
+        @include font-Titilliumweb-Bold;
+        margin-bottom: 30px; 
+        margin-top: 0; 
+        line-height: 1;
+        padding-bottom: 30px;
+        text-transform: capitalize;
+    }
+    .experience-item{
+        flex-basis: 100%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin-bottom: 30px;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        @include media-breakpoint-up(sm){
+            flex-basis: 50%;
+            max-width: 50%;
+        }
+        @include media-breakpoint-up(md){
+            flex-basis: 33.3333%;
+            max-width: 33.3333%;
+        }
+    }
+}
+/* ==============
+ * Past experience end
+ * ============== */

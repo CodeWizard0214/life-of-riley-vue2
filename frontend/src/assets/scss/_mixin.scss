@@ -1,0 +1,60 @@
+@mixin font-Raleway-Light {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+}
+@mixin font-Raleway-Regular {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+@mixin font-Raleway-Medium {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+@mixin font-Raleway-Semibold {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+@mixin font-Raleway-Bold {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+@mixin font-Titilliumweb-Light {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 300;
+}
+@mixin font-Titilliumweb-Regular {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+}
+@mixin font-Titilliumweb-Semibold {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+}
+@mixin font-Titilliumweb-Bold {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+}
+@mixin font-Titilliumweb-Black {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 900;
+}
+@mixin font-Proximanova-Light {
+    font-family: 'Proxima Nova Lt', sans-serif;
+    font-weight: 300;
+}
+@mixin font-Proximanova-Regular {
+    font-family: 'Proxima Nova Rg', sans-serif;
+    font-weight: normal;
+}
+@mixin font-Proximanova-Bold {
+    font-family: 'Proxima Nova Rg', sans-serif;
+    font-weight: bold;
+}
+@mixin font-Proximanova-Semibold {
+    font-family: 'Proxima Nova Lt', sans-serif;
+    font-weight: 600;
+}
+@mixin font-Proximanova-Black {
+    font-family: 'Proxima Nova Bl', sans-serif;
+    font-weight: 900;
+}

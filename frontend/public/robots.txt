@@ -1,0 +1,14 @@
+Sitemap: https://www.experientialstar.com/sitemap.xml
+User-Agent: *
+
+Disallow: /?page=
+Disallow: /?page=*
+Disallow: /registered
+Disallow: /redirect
+Disallow: /redirect/*
+Disallow: /administration
+
+User-Agent: Googlebot-Image
+Disallow: /*.webp$
+Disallow: /*.jpg$
+Disallow: /*.png$

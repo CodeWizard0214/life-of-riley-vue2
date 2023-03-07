@@ -1,0 +1,426 @@
+/* ==============
+ * LOGIN AND SIGNUP
+ * ============== */
+.login-body,
+.register-body {
+    background-color: $color-pattens-blue;
+    min-height: 100%;
+    height: 100%;
+    margin: 0 !important;
+    position: relative;
+}
+
+.login-signup-wrapper {
+    padding-bottom: 30px;
+    padding-top: 30px;
+
+    @include media-breakpoint-up(lg) {
+        padding-top: 65px;
+        padding-bottom: 125px;
+    }
+
+    .backtohomepage {
+        margin-bottom: 65px;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 30px;
+        }
+
+        a {
+            color: $color-arsenic;
+            font-size: 13px;
+            @include font-Titilliumweb-Bold;
+            letter-spacing: 2px;
+            line-height: 1.25;
+            text-transform: uppercase;
+            transition: all 0.3s ease-in-out 0s;
+
+            span {
+                &:first-child {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .loginsignup {
+        background-color: $color-alice-blue;
+        border-radius: 3px;
+        overflow: hidden;
+
+        .loginsignup-banner {
+            background-attachment: scroll;
+            background-color: transparent;
+            background-image: none;
+            background-position: right top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            flex-basis: 100%;
+            flex-grow: 0;
+            flex-shrink: 0;
+            max-width: 100%;
+            padding: 20px;
+
+            @media (max-width: 576px) {
+                display: none !important;
+            }
+
+            @include media-breakpoint-up(md) {
+                flex-basis: calc(100% - 462px);
+                max-width: calc(100% - 462px);
+                padding: 40px 45px;
+            }
+
+            .logo {
+                max-width: 192px;
+                margin-bottom: 40px;
+
+                @media (max-width: 576px) {
+                    margin-bottom: 0px;
+                }
+            }
+
+            .member-benefits {
+                h5 {
+                    color: $white;
+                    font-size: 28px;
+                    @include font-Titilliumweb-Bold;
+                    line-height: 41px;
+                    margin-bottom: 30px;
+                }
+
+                .benefits-group {
+                    .benefits-item {
+                        &:not(:last-child) {
+                            margin-bottom: 10px;
+                        }
+
+                        span {
+                            color: $white;
+                            @include font-Titilliumweb-Regular;
+
+                            &:first-child {
+                                font-size: 20px;
+                                line-height: 1;
+                                margin-right: 15px;
+
+                                i {
+                                    line-height: 1;
+                                }
+                            }
+
+                            &:last-child {
+                                font-size: 14px;
+                                line-height: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .loginsignup-content {
+            flex-basis: 100%;
+            flex-grow: 0;
+            flex-shrink: 0;
+            max-width: 100%;
+            padding: 20px;
+
+            @include media-breakpoint-up(md) {
+                flex-basis: 462px;
+                max-width: 462px;
+                padding: 60px;
+            }
+
+            h2 {
+                color: $color-arsenic;
+                font-size: 28px;
+                @include font-Titilliumweb-Bold;
+                margin-bottom: 15px;
+                line-height: 41px;
+            }
+
+            p {
+                color: $Suva-Grey;
+                @include font-Titilliumweb-Regular;
+                font-size: 12px;
+                line-height: 20px;
+                margin-bottom: 20px;
+            }
+
+            ul {
+                padding-left: 12px;
+            }
+
+            li {
+                color: $Suva-Grey;
+                @include font-Titilliumweb-Regular;
+                font-size: 12px;
+                line-height: 20px;
+                margin-bottom: 8px;
+            }
+
+            .forgotpassword {
+                color: $color-arsenic;
+                font-size: 13px;
+                @include font-Titilliumweb-Regular;
+                margin-bottom: 10px;
+            }
+
+            .loginsignup-form {
+                .form-group {
+                    margin-bottom: 25px;
+                    position: relative;
+
+                    .form-control {
+                        border-color: $color-whisper;
+                        border-radius: 3px;
+                        box-shadow: none;
+                        color: $color-midnight;
+                        font-size: 14px;
+                        @include font-Titilliumweb-Regular;
+                        height: 51px;
+                        // padding: 26px 15px 9px;
+                        transition: all 0.3s ease-in-out 0s;
+
+                        &:focus {
+                            border-color: #d5bc9e;
+
+                            &+.control-label {
+                                color: #d5bc9e;
+                                top: 12px;
+                            }
+                        }
+
+                        &.none-empty {
+                            border-color: #d5bc9e;
+
+                            &+.control-label {
+                                color: #d5bc9e;
+                                top: 12px;
+                            }
+                        }
+                    }
+                }
+
+                .form-check-label {
+                    span {
+                        color: $Suva-Grey;
+                        font-size: 12px;
+                        @include font-Titilliumweb-Regular;
+                    }
+                }
+
+                .button {
+                    background-color: transparent;
+                    border: none;
+                    border-radius: 3px;
+                    color: transparent;
+                    font-size: 13px;
+                    @include font-Titilliumweb-Bold;
+                    height: 36px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    transition: all 0.3s ease-in-out 0s;
+                    width: calc(50% - 10px);
+
+                    &:not(:last-child) {
+                        margin-right: 20px;
+                    }
+                }
+
+                .form-link-button {
+                    background-color: $white;
+                    color: $color-whiskey-sour;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+
+                .submit-button {
+                    background-image: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+                    background-size: 200% auto;
+                    color: $white;
+
+                    &:hover {
+                        background-position: right center;
+                    }
+                }
+            }
+
+            .channel-button {
+                align-items: center;
+                border-radius: 3px;
+                color: white;
+                display: flex;
+                flex-direction: row;
+                font-size: 13px;
+                @include font-Titilliumweb-Bold;
+                height: 40px;
+                justify-content: center;
+                letter-spacing: 1px;
+                line-height: 1;
+                transition: background-color 0.3s ease-in-out 0s;
+                text-transform: uppercase;
+                width: 100%;
+
+                &.channel-button-facebook {
+                    background-color: $color-mariner;
+                }
+
+                &.channel-button-google {
+                    background-color: $color-cinnabar;
+                }
+
+                &.channel-button-linkedin {
+                    background-color: $color-cerulean;
+                }
+
+                span {
+                    &:first-child {
+                        font-size: 24px;
+                        margin-right: 10px;
+                    }
+                }
+
+                &:hover {
+                    text-decoration: none;
+
+                    &.channel-button-facebook {
+                        background-color: rgba(59, 89, 153, 0.85);
+                    }
+
+                    &.channel-button-google {
+                        background-color: rgba(222, 75, 57, 0.85);
+                    }
+
+                    &.channel-button-linkedin {
+                        background-color: rgba(0, 123, 182, 0.85);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.stepreg {
+    background-color: #F9FAFC;
+
+    .right-side {
+        padding: 30px;
+
+        p {
+            font-size: 17px;
+            color: #1d1d1d;
+        }
+    }
+
+    h2 {
+        color: #1E2226;
+        font-size: 28px;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 700;
+        margin-bottom: 25px;
+        line-height: 41px;
+    }
+
+    p {
+        color: #8F8F8F;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+        position: relative;
+    }
+
+    .form-control {
+        border-color: #E7E7E7;
+        border-radius: 3px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        color: #283544;
+        font-size: 14px;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 400;
+        height: 51px;
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+    }
+
+    .btn-gold {
+        background-image: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+        background-size: 200% auto;
+        color: #fff;
+        border: none !important;
+    }
+
+    .perks {
+        padding-left: 0px;
+        list-style: none;
+    }
+
+    .price {
+        background-color: #FFF;
+        border: solid 2px #C8AD5E;
+        border-radius: 3px;
+        padding: 20px;
+        margin-bottom: 20px;
+
+        .bigger {
+            font-size: 17px;
+        }
+
+        p {
+            font-size: 15px;
+            color: #1d1d1d;
+            line-height: 32px;
+            margin-bottom: 0px;
+            padding-botton: 0px;
+        }
+    }
+
+    .btn-checkout {
+        background-color: #FFF;
+        border: solid 2px #cccccc;
+        font-size: 17px;
+        color: #1d1d1d;
+    }
+
+    .item-table {
+        margin-bottom: 30px;
+
+        .items {
+            margin-bottom: 5px;
+            font-size: 17px;
+        }
+
+        p {
+            font-size: 17px;
+            color: #1d1d1d;
+        }
+
+
+    }
+}
+
+hr.dashed {
+    border-top: 1px dashed #CCC;
+}
+
+.final {
+    p {
+        font-size: 17px;
+        color: #1d1d1d;
+        line-height: 32px;
+    }
+}
+
+/* ==============
+ * LOGIN AND SIGNUP end
+ * ============== */

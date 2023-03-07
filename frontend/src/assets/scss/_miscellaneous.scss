@@ -1,0 +1,139 @@
+/* ==============
+ * LEGAL
+ * ============== */
+ .tarms-conditions{
+    padding-bottom: 40px;
+    padding-top: 40px;
+    h1,
+    h3{
+        @include font-Titilliumweb-Bold;
+        margin-bottom: 30px;
+    }
+    h4{
+        @include font-Titilliumweb-Bold;
+    }
+    h1{
+        color: $color-arsenic;
+        font-size: 21px;
+    }
+    h3{
+        color: $color-arsenic;
+        font-size: 21px;
+    }
+    p{
+        color: $color-suva-grey;
+        font-size: 16px;
+        @include font-Titilliumweb-Regular;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        text-align: justify;
+        strong{
+            color: $color-arsenic;
+        }
+    }
+    ul{
+        margin-bottom: 10px;
+        padding-left: 20px;
+        li{
+            color: $color-arsenic;
+            font-size: 16px;
+            @include font-Titilliumweb-Regular;
+            line-height: 1.5;
+            text-align: justify;
+        }
+    }
+    .return-button{
+        background-color: $color-whiskey-sour;
+        border: none;
+        border-radius: 3px;
+        color: white;
+        @include font-Titilliumweb-Regular;
+        font-size: 15px;
+        height: 45px;
+        letter-spacing: 1px;
+        margin-top: 20px;
+        padding: 5px 15px;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease-in-out 0s;
+        &:hover{
+            background-color: $color-caribbean-green;
+        }
+    }
+    table{
+        tr{
+            td{
+                font-size: 1rem;
+                @include font-Titilliumweb-Regular;
+                line-height: 1.5;
+                padding: 4px;
+                &:not(:last-child){
+                    white-space: nowrap;
+                }
+                p{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+/* ==============
+ * LEGAL end
+ * ============== */
+/* ==============
+ * SITEMAP
+ * ============== */
+ .sitemap{
+    padding-bottom: 30px;
+    padding-top: 40px;
+    h2{
+        color: $color-arsenic;
+        font-size: 32px;
+        @include font-Titilliumweb-Bold;
+        margin-bottom: 30px;
+    }
+    .sitemap-group{
+        margin-left: -15px;
+        margin-right: -15px;
+        .sitemap-item{
+            flex-basis: 100%;
+            flex-grow: 0;
+            flex-shrink: 0;
+            margin-bottom: 10px;
+            max-width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            @include media-breakpoint-up(lg){
+                flex-basis: 33.3333%;
+                max-width: 33.3333%;
+            }
+            .sitemap-link{
+                color: $color-curious-blue;
+                display: inline-block;
+                font-size: 16px;
+                @include font-Titilliumweb-Regular;
+                line-height: 26px;
+                margin-left: 30px;
+                position: relative;
+                transition: color 0.3s ease-in-out 0s;
+                &:hover{
+                    color: $color-mid-grey;
+                    text-decoration: none;
+                }
+                &:before{
+                    background-color: $color-arsenic;
+                    border-radius: 50%;
+                    content: '';
+                    display: block;
+                    height: 10px;
+                    left: -20px;
+                    position: absolute;
+                    top: 8px;
+                    width: 10px;
+                }
+            }
+        }
+    }
+}
+/* ==============
+ * SITEMAP END
+ * ============== */
